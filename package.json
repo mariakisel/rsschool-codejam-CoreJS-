@@ -1,0 +1,27 @@
+{
+  "name": "rsschool-codejam-corejs-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariakisel/rsschool-codejam-CoreJS-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariakisel/rsschool-codejam-CoreJS-/issues"
+  },
+  "homepage": "https://github.com/mariakisel/rsschool-codejam-CoreJS-#readme"
+}
