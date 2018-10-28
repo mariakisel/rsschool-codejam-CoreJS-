@@ -31,3 +31,17 @@ describe('sumOfOther', () => {
     });
 });
 
+describe('make', () => {
+    it('reduces value', () => {
+        assert.equal(make('111', '222')('333')((a, b) => a + b), '111222333');
+        assert.equal(make(15)(34, 21, 666)(41)((a, b) => a + b), 777);
+    });
+
+    it('argument reduction', () => {
+        assert.deepEqual(
+            make(15, 34)(49)('777')
+                ((acc, val) => (Array.isArray(acc) ? acc : [acc]).concat(val)),
+            [15, 34, 49, '777']
+        );
+    });
+});

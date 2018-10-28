@@ -1,12 +1,13 @@
-module.exports = function sumOfOther(args) {
-    return args.map((val, index) => {
-        const emptySymbol = Symbol();
-        return args.reduce((acc, val, sumIndex) => {
-            return index == sumIndex
+module.exports = function sumOfOther(arg) {
+    return arg.map((val, index) => {
+        const emp = Symbol();
+        return arg.reduce((acc, val, sum) => {
+            return index == sum
                 ? acc
-                : (acc == emptySymbol ? val : acc + val);
+                : (acc == emp ? val : acc + val);
         
-        }, emptySymbol);
+        }, 
+        emp);
     });
 }
 
