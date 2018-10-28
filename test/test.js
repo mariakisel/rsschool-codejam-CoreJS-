@@ -52,8 +52,11 @@ describe('recursion', () => {
         assert.equal(make('111', '222')('333')((a, b) => a + b), '111222333');
         assert.equal(make(15)(34, 21, 666)(41)((a, b) => a + b), 777);
     });
-    
-       
+    it('check',() =>{  
+        let tree = {"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},
+       "right":{"value":120,"left":{"value":110},"right":{"value":130}}};
+       assert.deepEqual(recursion(tree),[[100], [90, 120], [70,99,110,130]]);});
+          
     it('argument reduction', () => {
         assert.deepEqual(
             make(15, 34)(49)('777')
